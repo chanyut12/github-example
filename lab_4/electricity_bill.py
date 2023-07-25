@@ -7,8 +7,8 @@ if a=="h":
         print("{:.2f}".format(b*2.00))
 elif a=="d":
     if b<200: #2.5
-        print("{}".format(b*2.5))
+        print("{:.2f}".format(b*2.5))
     else: #2.75
-        print("{}".format(b*2.75))      
+        print("{:.2f}".format(b*2.75))      
 else:
     print("Error")        
