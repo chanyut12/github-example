@@ -7,5 +7,7 @@ while a >= 0:
         b+=1
     elif 0<a<=60:
         c+=1
+    elif a==-1:
+        break
 print(b)
 print(c)            
