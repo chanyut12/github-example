@@ -1,0 +1,5 @@
+a=input()
+print(a.swapcase())
+print(a.capitalize())
+print(a.upper())
+print(a.lower())
