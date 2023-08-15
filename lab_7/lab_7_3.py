@@ -1,5 +1,0 @@
-a=input()
-print(a.swapcase())
-print(a[0].upper()+a[1:6].lower())
-print(a.upper())
-print(a.lower())
