@@ -1,4 +1,4 @@
-a=input().strip()
+a=input().strip() # .strip = method removes any leading, and trailing whitespaces.
 b=input().strip()
 c=input()
 c=str(c)
