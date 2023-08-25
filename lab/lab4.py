@@ -1,6 +1,6 @@
 a = int(input())
 b=1
-d=3
+d=a-1
 c = a
 for i in range(a):
     for j in range(d):
