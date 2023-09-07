@@ -41,7 +41,7 @@ def find_index(num_list, search_value):
     Function to find the index of the search_value in the list.
     Returns -1 if the value is not found.
     """
-    for i, num in enumerate(num_list):
+    for i, num in enumerate(num_list): #enumerate ดึง index ของค่านั้น ๆ
         if num == search_value:
             return i
     return -1
