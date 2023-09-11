@@ -15,12 +15,14 @@ def check_rows(matrix):
     for i in range(len(matrix)):
         if matrix[i] == [matrix[i][0]] * 3:
             print(f"All {matrix[i][0]} on row {i}")
+            #print("All {} on row {}".format(matrix[i][0], i)
 
 def check_columns(matrix):
     for j in range(3):
         col = [matrix[i][j] for i in range(3)]
         if col == [matrix[0][j]] * 3:
             print(f"All {matrix[0][j]} on column {j}")
+            #print("All {} on column {}".format(matrix[0][j]))
 
 def main():
     matrix = create(n)
