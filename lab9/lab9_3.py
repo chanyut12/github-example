@@ -9,7 +9,7 @@ def create(m,n):
     for i in range(m):
         row = []
         for j in range(n):
-            col = input()
+            col = input().strip()
             row.append(col)
         matrix.append(row)    
     return matrix   
