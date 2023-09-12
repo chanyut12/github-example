@@ -1,7 +1,7 @@
 n = int(input())
 
 a_inverse = [[0 for j in range(n)] for i in range(n)]
-print(a_inverse)
+#print(a_inverse)
 
 matrix = []
 
