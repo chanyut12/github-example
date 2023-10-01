@@ -45,7 +45,7 @@ class Store:
 
         return round(total, 2)
     
-    #แสดงว่ารายสิ้น
+    #แสดงว่ารายทั้งหมดพร้อมราคา
     def show_products(self):
         for product, price in self.products.items():
             print(f"{product.capitalize()}: ${price}")
