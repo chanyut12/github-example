@@ -1,4 +1,5 @@
 class Store:
+    #กำหนดค่าต่าง ๆ ของสินค้า
     def __init__(self):
         self.products = {
             "apple": 0.5,
@@ -14,17 +15,20 @@ class Store:
             "beverages": ["milk", "juice"],
             "bakery": ["bread"]
         }
-
+        
+        #กำหนดและแนะนำโปรโมชันของสินค้า
         self.promotions = {
             "apple_banana": "Buy an apple and a banana to get 10% off on both!",
             "milk_bread": "Buy milk and bread together for just $3!"
         }
         
+        #กำหนดส่วนลดของสินค้านั้น ๆ
         self.discounts = {
             "banana": 0.1,
             "juice": 0.2,
         }
-
+        
+    #แนะนำสินค้า สำหรับลูกค้าที่ไม่รู้ว่าจะซื้ออะไร
     def advise_customer(self):
         advice = [
             "If you're thirsty, try juice or milk!",
@@ -32,7 +36,8 @@ class Store:
             "Bread is great for sandwiches and toast."
         ]
         return advice
-
+        
+    #คำนวนรายการสินค้า
     def calculate_cost(self, cart):
         total = 0
         for item, quantity in cart.items():
@@ -47,11 +52,13 @@ class Store:
             total = total - (self.products["milk"] + self.products["bread"]) + 3
 
         return round(total, 2)
-
+        
+    #แสดงว่ารายทั้งหมดพร้อมราคา
     def show_products(self):
         for product, price in self.products.items():
             print(f"{product.capitalize()}: ${price}")
-
+            
+    #ค้นหารายการสินค้า
     def search_product(self):
         search_term = input("Enter product name or partial name to search: ").lower()
         matches = [prod for prod in self.products.keys() if search_term in prod]
@@ -65,11 +72,13 @@ class Store:
             for promo, desc in self.promotions.items():
                 if match in promo:
                     print(f"Promotion: {desc}")
-
+                    
+    #checkout และ show ราคาทั้งหมด
     def checkout(self, cart):
         total_cost = self.calculate_cost(cart)
         print(f"Your total cost is: ${total_cost}")
-
+        
+    #เลือกรายการที่จะซื้อ พร้อมจำนวนที่จะซื้อ
     def recursive_ask(self, cart):
         product_name = input("Enter product to buy (or 'done' to checkout): ").lower()
 
