@@ -77,7 +77,12 @@ class Store:
             for promo, desc in self.promotions.items():
                 if match in promo:
                     print(f"Promotion: {desc}")
-                    
+
+    def show_promotions(self):
+        print("\nPromotions:")
+        for promo, desc in self.promotions.items():
+            print(desc)       
+
     #checkout และ show ราคาทั้งหมด
     def checkout(self, cart):
         total_cost = self.calculate_cost(cart)
@@ -110,7 +115,8 @@ class Store:
             print("4: Search product")
             print("5: Checkout")
             print("6: Show categories")
-            print("7: Exit")
+            print("7: Show promotion")
+            print("8: Exit")
 
             choice = input("Choose an option: ")
             if choice == '1':
@@ -127,7 +133,9 @@ class Store:
                 self.checkout(cart)
             elif choice =="6":
                 self.show_categories()
-            elif choice == '7':
+            elif choice == "7":
+                self.show_promotions() 
+            elif choice == '8':
                 print("Thank you for shopping")
                 break
             else:
