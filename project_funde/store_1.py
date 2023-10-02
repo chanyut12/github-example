@@ -57,7 +57,12 @@ class Store:
     def show_products(self):
         for product, price in self.products.items():
             print(f"{product.capitalize()}: ${price}")
-            
+
+    #แสดง categories
+    def show_categories(self):
+        for cate , product_ in self.categories.items():
+            print(f"{cate.capitalize()}: {product_}")   
+
     #ค้นหารายการสินค้า
     def search_product(self):
         search_term = input("Enter product name or partial name to search: ").lower()
@@ -104,7 +109,8 @@ class Store:
             print("3: Buy")
             print("4: Search product")
             print("5: Checkout")
-            print("6: Exit")
+            print("6: Show categories")
+            print("7: Exit")
 
             choice = input("Choose an option: ")
             if choice == '1':
@@ -119,7 +125,9 @@ class Store:
                 self.search_product()
             elif choice == '5':
                 self.checkout(cart)
-            elif choice == '6':
+            elif choice =="6":
+                self.show_categories()
+            elif choice == '7':
                 print("Thank you for shopping")
                 break
             else:
